@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Password Generator</title>
+
+    <link rel="stylesheet"
+          href="pass gen.css">
+
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <p class="subtitle">
+            Create a secure random password
+        </p>
+
+
+        <div class="password-box">
+
+            <input
+                type="text"
+                id="passwordOutput"
+                placeholder="Your password will appear here"
+                readonly
+            >
+
+            <button onclick="copyPassword()">
+                Copy
+            </button>
+
+        </div>
+
+
+        <div class="setting">
+
+            <label for="passwordLength">
+                Password Length
+            </label>
+
+            <input
+                type="number"
+                id="passwordLength"
+                value="12"
+                min="4"
+                max="50"
+            >
+
+        </div>
+
+
+        <div class="options">
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="uppercase"
+                    checked
+                >
+                Uppercase Letters
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="lowercase"
+                    checked
+                >
+                Lowercase Letters
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="numbers"
+                    checked
+                >
+                Numbers
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="symbols"
+                    checked
+                >
+                Symbols
+            </label>
+
+        </div>
+
+
+        <button
+            class="generate-button"
+            onclick="generatePassword()">
+
+            Generate Password
+
+        </button>
+
+
+        <p id="errorMessage"></p>
+
+
+    </div>
+
+    <script src="pass gen.js"></script>
+
+</body>
+
+</html>
