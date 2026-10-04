@@ -1,18 +1,14 @@
 function generatePassword() {
 
     const length = Number(document.getElementById("passwordLength").value);
-
     const useUppercase = document.getElementById("uppercase").checked;
     const useLowercase = document.getElementById("lowercase").checked;
     const useNumbers = document.getElementById("numbers").checked;
     const useSymbols = document.getElementById("symbols").checked;
-
     const passwordOutput = document.getElementById("passwordOutput");
     const errorMessage = document.getElementById("errorMessage");
 
-
     errorMessage.textContent = "";
-
 
     if (length < 4 || length > 50) {
         errorMessage.textContent =
